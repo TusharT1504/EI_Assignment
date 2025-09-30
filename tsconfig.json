@@ -10,6 +10,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "Task_1"],
+  "include": ["src", "Task_1", "Task_2"],
   "exclude": ["node_modules", "dist"]
 }

@@ -4,10 +4,11 @@ import { runObserverPattern } from "../Task_1/behavioral/observer/observer";
 import { runStrategyPattern } from "../Task_1/behavioral/strategy/strategy";
 import { runAdapterPattern } from "../Task_1/structural/adapter/adapter";
 import { runDecoratorPattern } from "../Task_1/structural/decorator/decorator";
+import { runSatelliteCli } from "../Task_2/cli/runner";
 
 function getUserInput(): Promise<string> {
   return new Promise((resolve) => {
-    process.stdin.once('data', (data) => {
+    process.stdin.once("data", (data) => {
       resolve(data.toString().trim());
     });
   });
@@ -21,24 +22,25 @@ function showMenu() {
   console.log("4. Strategy Pattern");
   console.log("5. Adapter Pattern");
   console.log("6. Decorator Pattern");
+  console.log("7. Satellite Command System (Exercise 2)");
   console.log("Type 'exit' to quit");
   console.log("Enter your choice: ");
 }
 
 (async () => {
   let continueRunning = true;
-  
+
   while (continueRunning) {
     showMenu();
-    
+
     const input = await getUserInput();
-    
-    if (input.toLowerCase() === 'exit') {
+
+    if (input.toLowerCase() === "exit") {
       console.log("Goodbye!");
       continueRunning = false;
       break;
     }
-    
+
     const choice = parseInt(input);
 
     switch (choice) {
@@ -66,11 +68,15 @@ function showMenu() {
         console.log("Running Decorator Pattern Demo...");
         runDecoratorPattern();
         break;
+      case 7:
+        console.log("Launching Satellite Command System CLI...");
+        await runSatelliteCli();
+        break;
       default:
-        console.log("Invalid choice! Please enter 1-6, or 'exit'");
+        console.log("Invalid choice! Please enter 1-8, or 'exit'");
         break;
     }
   }
-  
+
   process.exit(0);
 })();
