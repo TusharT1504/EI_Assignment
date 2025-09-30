@@ -10,21 +10,21 @@ The project covers the following patterns and use-cases:
 
 1. Behavioral Patterns
 	 - Observer Pattern — Stock market price notifications
-		 - Class Diagram: `ClassDiagram/observer.png`
+		![Observer Pattern](ClassDiagram/observer.png)
 	 - Strategy Pattern — Checkout discount strategies (none, percentage, flat)
-		 - Class Diagram: `ClassDiagram/strategy.png`
+		![Strategy Pattern](ClassDiagram/strategy.png)
 
 2. Creational Patterns
 	 - Factory Pattern — Notification service factory (Email, SMS)
-		 - Class Diagram: `ClassDiagram/factory.png`
+		![Factory Pattern](ClassDiagram/factory.png)
 	 - Builder Pattern — Pizza builder
-		 - Class Diagram: `ClassDiagram/builder.png`
+		![Builder Pattern](ClassDiagram/builder.png)
 
 3. Structural Patterns
 	 - Adapter Pattern — Unifying WhatsApp API and SMS under a common interface
-		 - Class Diagram: `ClassDiagram/adapter.png`
+		![Adapter Pattern](ClassDiagram/adapter.png)
 	 - Decorator Pattern — Sandwich with toppings (cheese, tomato, lettuce)
-		 - Class Diagram: `ClassDiagram/decorater.png`
+		![Decorator Pattern](ClassDiagram/decorater.png)
 
 ## Features
 
@@ -96,7 +96,7 @@ Console-based simulation of a satellite with commands to rotate, control solar p
 From the main menu, choose option `7`. Alternatively, you can import and call `runSatelliteCli()` from `Task_2/satellite/satellite.ts` in your own entry script.
 
 ### Class Diagram
-- `ClassDiagram/satellite.png`
+![Satellite Command System](ClassDiagram/satellite.png)
 
 ## Technologies Used
 - TypeScript, Node.js (console-based; no UI)
